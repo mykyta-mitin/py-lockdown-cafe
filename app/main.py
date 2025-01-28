@@ -6,6 +6,7 @@ from app.errors import NotVaccinatedError, OutdatedVaccineError, NotWearingMaskE
 def go_to_cafe(friends: list, cafe: Cafe) -> str:
     try:
         friends_without_mask = 0
+
         for friend in friends:
             try:
                 cafe.visit_cafe(friend)
